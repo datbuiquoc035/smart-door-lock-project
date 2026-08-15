@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "author": "qdot",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 10, "left": 10, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": 330, "left": 20, "attrs": { "columns": "3" } },
+    { "type": "wokwi-servo", "id": "servo1", "top": 343.6, "left": 326.4, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 10, "left": 660, "attrs": { "pins": "i2c" } },
+    {
+      "type": "wokwi-led",
+      "id": "led-green",
+      "top": 110,
+      "left": 660,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": 130, "left": 700, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led-red", "top": 190, "left": 660, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 210, "left": 700, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "buzzer1", "top": 280, "left": 660, "attrs": {} }
+  ],
+  "connections": [
+    [ "keypad1:R1", "uno:9", "yellow", [] ],
+    [ "keypad1:R2", "uno:8", "yellow", [] ],
+    [ "keypad1:R3", "uno:7", "yellow", [] ],
+    [ "keypad1:R4", "uno:6", "yellow", [] ],
+    [ "keypad1:C1", "uno:5", "green", [] ],
+    [ "keypad1:C2", "uno:4", "green", [] ],
+    [ "keypad1:C3", "uno:3", "green", [] ],
+    [ "servo1:V+", "uno:5V", "red", [] ],
+    [ "servo1:GND", "uno:GND.1", "black", [] ],
+    [ "servo1:PWM", "uno:10", "orange", [] ],
+    [ "lcd1:GND", "uno:GND.2", "black", [] ],
+    [ "lcd1:VCC", "uno:5V", "red", [] ],
+    [ "lcd1:SDA", "uno:A4", "blue", [] ],
+    [ "lcd1:SCL", "uno:A5", "blue", [] ],
+    [ "led-green:A", "uno:11", "green", [] ],
+    [ "led-green:C", "r1:1", "green", [] ],
+    [ "r1:2", "uno:GND.3", "black", [] ],
+    [ "led-red:A", "uno:12", "red", [] ],
+    [ "led-red:C", "r2:1", "red", [] ],
+    [ "r2:2", "uno:GND.3", "black", [] ],
+    [ "buzzer1:2", "uno:13", "orange", [] ],
+    [ "buzzer1:1", "uno:GND.3", "black", [] ]
+  ],
+  "dependencies": {}
+}
