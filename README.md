@@ -99,3 +99,5 @@ All settings are defined as constants in `sketch.ino`:
 ## License
 
 MIT
+
+This is an IoT assignment project, can be used as a reference for your own.
