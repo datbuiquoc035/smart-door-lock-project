@@ -1,15 +1,3 @@
-/*
- * Smart Door Lock - Arduino Uno (Wokwi simulation)
- * Keypad 3x4 + Servo SG90 (simulated) + LCD 16x2 I2C + LED xanh/do + Buzzer
- *
- * Tinh nang:
- *  - Nhap ma 4 so de mo khoa (mat khau mac dinh: 1234, luu trong EEPROM)
- *  - '*' xoa ky tu vua nhap, '#' vao che do doi mat khau (nhan lan nua de huy)
- *  - Dung ma: servo quay 90 do (mo khoa), tu dong khoa lai sau 5 giay
- *  - Sai ma 3 lan: khoa ban phim 30 giay
- *  - 'D' khi dang mo khoa: khoa tay ngay lap tuc
- */
-
 #include <Servo.h>
 #include <Keypad.h>
 #include <LiquidCrystal_I2C.h>
