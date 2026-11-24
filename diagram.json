@@ -4,9 +4,21 @@
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-arduino-uno", "id": "uno", "top": 10, "left": 10, "attrs": {} },
-    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": 330, "left": 20, "attrs": { "columns": "3" } },
-    { "type": "wokwi-servo", "id": "servo1", "top": 343.6, "left": 326.4, "attrs": {} },
-    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 10, "left": 660, "attrs": { "pins": "i2c" } },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -472.4,
+      "left": 57.9,
+      "attrs": { "columns": "3" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -155.6, "left": 432, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -41.6,
+      "left": 658.4,
+      "attrs": { "pins": "i2c" }
+    },
     {
       "type": "wokwi-led",
       "id": "led-green",
